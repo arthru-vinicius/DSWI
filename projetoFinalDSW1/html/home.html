@@ -42,9 +42,96 @@
                     <img src="/images/Onca1.jpg">
                 </div>
             </section>
+            <section>
+                <div>
+                    <h1>Sobre Nós</h1>
+                    <p>Bem-vindo ao Refúgio Felino! Somos uma família apaixonada por esses magníficos habitantes das
+                        florestas brasileiras,
+                        comprometidos em preservar e proteger cada felino que chama a Amazônia de lar.</p>
+                    <button>Saiba mais</button>
+                </div>
+            </section>
+            <section>
+                <h1>Animais</h1>
+                <label for="selecaoAnimal">Escolha um animal:</label>
+                <select id="selecaoAnimal">
+                    <option value="selecione">Selecione um animal</option>
+                    <option value="oncaPintada">Onça-pintada</option>
+                    <option value="oncaParda">Onça-parda</option>
+                    <option value="jaguarundi">Jaguarundi</option>
+                    <option value="jaguatirica">Jaguatirica</option>
+                    <option value="gatoMaracuja">Gato-maracujá</option>
+                    <option value="gatoMacambira">Gato-macambira</option>
+                    <option value="gatoPequeno">Gato-do-mato-pequeno</option>
+                    <option value="gatoGrande">Gato-do-mato-grande</option>
+                    <option value="gatoPalheiro">Gato-palheiro</option>
+                </select>
+
+                <div id="informacaoAnimal">
+                    <img id="animalImg" src="" alt="Imagem do animal">
+                    <p id="descricaoAnimal"></p>
+                </div>
+            </section>
+            <section>
+                <div>
+                    <h1>Contato</h1>
+                    <div>
+                        <div>
+                            <h3>Telefone</h3>
+                            <p>(11) 3456-7890</p>
+                        </div>
+                        <div>
+                            <h3>Email</h3>
+                            <p>refugiofelino@gmail.com</p>
+                        </div>
+                        <div>
+                            <h3>Área de Serviço</h3>
+                            <p>Atendemos todo o Brasil</p>
+                        </div>
+                        <div>
+                            <h3>Endereço</h3>
+                            <p>Boa Vista, Manaus - AM</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </main>
-        <footer></footer>
+        <footer>
+            <div>
+                <p>©2023 Arthur Vinicius Jurema de Brito Rodrigues</p>
+                <p>Informações e imagens retiradas do site: https://www.icmbio.gov.br/cenap/carnivoros-brasileiros.html#topo</p>
+            </div>
+        </footer>
     </div>
+    <script>
+        const selecaoAnimal = document.getElementById('selecaoAnimal');
+        const informacaoAnimal = document.getElementById('informacaoAnimal');
+
+        selecaoAnimal.addEventListener('change', function () {
+            const animalSelecionado = selecaoAnimal.value;
+
+            if (animalSelecionado === 'oncaPintada') {
+                exibirinformacaoAnimal('Tigre', 'tigre.jpg', 'O tigre é o maior felino existente e possui listras únicas em sua pelagem. Ele é um caçador solitário e vive em diversas regiões da Ásia.');
+            } else if (animalSelecionado === 'leao') {
+                exibirinformacaoAnimal('Leão', 'leao.jpg', 'O leão é conhecido por ser o "Rei da Selva". Vivem em grupos sociais chamados de "coalizões" e habitam principalmente na África.');
+            } else if (animalSelecionado === 'onca') {
+                exibirinformacaoAnimal('Onça', 'onca.jpg', 'A onça-pintada é o maior felino das Américas e possui uma pelagem com manchas chamadas de rosetas. Ela é uma excelente nadadora e habita principalmente na América do Sul.');
+            } else {
+                informacaoAnimal.style.display = 'none';
+            }
+        });
+
+        function exibirinformacaoAnimal(nome, imagem, descricao) {
+            const animalImg = document.getElementById('animalImg');
+            const descricaoAnimal = document.getElementById('descricaoAnimal');
+
+            animalImg.src = imagem;
+            animalImg.alt = `Imagem do ${nome}`;
+            descricaoAnimal.textContent = descricao;
+            informacaoAnimal.style.display = 'block';
+        }
+    </script>
 </body>
+
 
 </html>
