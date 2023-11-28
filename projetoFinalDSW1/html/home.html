@@ -1,81 +1,114 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Refúgio Felino</title>
+    <link rel="icon" type="image/x-icon" href="../images/icon.ico" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+    <link rel="stylesheet" href="../css/styles.css" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
 </head>
 
 <body>
     <div>
-        <header>
-            <nav>
-                <div>
-                    <ul>
-                        <li>
-                            <a>Home</a>
-                        </li>
-                        <li>
-                            <a>Sobre</a>
-                        </li>
-                        <li>
-                            <a>Animais</a>
-                        </li>
-                        <li>
-                            <a>Contato</a>
-                        </li>
-                        <li>
-                            <button>Doar</button>
-                        </li>
-                    </ul>
+        <header class="container">
+            <nav class="navbar navbar-expand-lg">
+                <div class="container-fluid">
+                    <div class="d-flex">
+                        <a href="#">
+                            <img src="../images/logo.png" loading="lazy" class="abs-img container" />
+                        </a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                            aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                    </div>
+
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link" aria-current="page" href="#">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#sobre">Sobre</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#animais">Animais</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#contato">Contato</a>
+                            </li>
+                            <button class="button-doacao"><a href="./doacao.html">Faça Sua Doação</a></button>
+                        </ul>
+                    </div>
                 </div>
             </nav>
         </header>
+
         <main>
-            <section>
-                <div>
+            <section class="home container" id="home">
+                <div class="home-title">
                     <h1>Refúgio Felino</h1>
-                    <button>Faça Sua Doação</button>
+                    <button class="button-doacao2"><a href="./doacao.html">Faça Sua Doação</a></button>
                 </div>
                 <div>
-                    <img src="/images/Onca1.jpg">
+                    <img class="home-img" src="../images/Onca1.jpg" />
                 </div>
             </section>
-            <section>
-                <div>
-                    <h1>Sobre Nós</h1>
-                    <p>Bem-vindo ao Refúgio Felino! Somos uma família apaixonada por esses magníficos habitantes das
-                        florestas brasileiras,
-                        comprometidos em preservar e proteger cada felino que chama a Amazônia de lar.</p>
-                    <button>Saiba mais</button>
+
+            <section id="sobre" class="container">
+                <div class="container-flex">
+                    <div class="sobre-container">
+                        <img class="sobre-img" src="../images/onca2.jpg" />
+
+                        <div class="sobre-content">
+                            <h2 class="section-title">Sobre Nós</h2>
+                            <p class="section-text">
+                                Bem-vindo ao Refúgio Felino! Somos uma família apaixonada por
+                                esses magníficos habitantes das florestas brasileiras,
+                                comprometidos em preservar e proteger cada felino que chama o Brasil de lar.
+                            </p>
+                            <button class="button-doacao2"><a href="./sobre.html">Saiba Mais</a></button>
+                        </div>
+                    </div>
                 </div>
             </section>
-            <section>
+
+            <section class="tipos-animais container" id="animais">
                 <h1>Animais</h1>
-                <label for="selecaoAnimal">Escolha um animal:</label>
-                <select id="selecaoAnimal">
-                    <option value="selecione">Selecione um animal</option>
-                    <option value="oncaPintada">Onça-pintada</option>
-                    <option value="oncaParda">Onça-parda</option>
-                    <option value="jaguarundi">Jaguarundi</option>
-                    <option value="jaguatirica">Jaguatirica</option>
-                    <option value="gatoMaracuja">Gato-maracujá</option>
-                    <option value="gatoMacambira">Gato-macambira</option>
-                    <option value="gatoPequeno">Gato-do-mato-pequeno</option>
-                    <option value="gatoGrande">Gato-do-mato-grande</option>
-                    <option value="gatoPalheiro">Gato-palheiro</option>
-                </select>
+                <div class="animais-infor container">
+                    <label for="selecaoAnimal">Escolha um animal:</label>
+                    <select id="selecaoAnimal">
+                        <option value="selecione">Selecione um animal</option>
+                        <option value="oncaPintada">Onça-pintada</option>
+                        <option value="oncaParda">Onça-parda</option>
+                        <option value="jaguarundi">Jaguarundi</option>
+                        <option value="jaguatirica">Jaguatirica</option>
+                        <option value="gatoMaracaja">Gato-maracajá</option>
+                        <option value="gatoMacambira">Gato-macambira</option>
+                        <option value="gatoPequeno">Gato-do-mato-pequeno</option>
+                        <option value="gatoGrande">Gato-do-mato-grande</option>
+                        <option value="gatoPalheiro">Gato-palheiro</option>
+                    </select>
+                </div>
 
                 <div id="informacaoAnimal">
-                    <img id="animalImg" src="" alt="Imagem do animal">
+                    <img id="animalImg" class="img-banner container" src="../images/banner.png"
+                        alt="Imagem do animal" />
                     <p id="descricaoAnimal"></p>
                 </div>
             </section>
-            <section>
-                <div>
+
+            <section id="contato">
+                <div class="section-contato">
                     <h1>Contato</h1>
-                    <div>
+                    <div class="contato-content">
                         <div>
                             <h3>Telefone</h3>
                             <p>(11) 3456-7890</p>
@@ -99,39 +132,115 @@
         <footer>
             <div>
                 <p>©2023 Arthur Vinicius Jurema de Brito Rodrigues</p>
-                <p>Informações e imagens retiradas do site: https://www.icmbio.gov.br/cenap/carnivoros-brasileiros.html#topo</p>
+                <p>
+                    Informações e imagens retiradas do site:
+                    https://www.icmbio.gov.br/cenap/carnivoros-brasileiros.html#topo
+                </p>
             </div>
         </footer>
     </div>
     <script>
-        const selecaoAnimal = document.getElementById('selecaoAnimal');
-        const informacaoAnimal = document.getElementById('informacaoAnimal');
+        const selecaoAnimal = document.getElementById("selecaoAnimal");
+        const informacaoAnimal = document.getElementById("informacaoAnimal");
 
-        selecaoAnimal.addEventListener('change', function () {
+        selecaoAnimal.addEventListener("change", function () {
             const animalSelecionado = selecaoAnimal.value;
 
-            if (animalSelecionado === 'oncaPintada') {
-                exibirinformacaoAnimal('Tigre', 'tigre.jpg', 'O tigre é o maior felino existente e possui listras únicas em sua pelagem. Ele é um caçador solitário e vive em diversas regiões da Ásia.');
-            } else if (animalSelecionado === 'leao') {
-                exibirinformacaoAnimal('Leão', 'leao.jpg', 'O leão é conhecido por ser o "Rei da Selva". Vivem em grupos sociais chamados de "coalizões" e habitam principalmente na África.');
-            } else if (animalSelecionado === 'onca') {
-                exibirinformacaoAnimal('Onça', 'onca.jpg', 'A onça-pintada é o maior felino das Américas e possui uma pelagem com manchas chamadas de rosetas. Ela é uma excelente nadadora e habita principalmente na América do Sul.');
+            if (animalSelecionado === "oncaPintada") {
+                exibirinformacaoAnimal(
+                    "Onça-pintada",
+                    "../images/onca-pintada.png",
+                    `Nomes comuns: Onça-pintada, onça-preta, jaguaretê, canguçu.
+
+Nome em inglês: Jaguar.
+
+Ameaças e conservação: Perda e fragmentação de habitat, associadas principalmente à expansão agropecuária, mineração, implantação de hidrelétricas e ampliação da malha viária, são as principais ameaças à conservação. É classificado pelo MMA (Ministério do Meio Ambiente, 2014) como espécie VULNERÁVEL. O ‘‘Plano de Ação para a Conservação da Onça-Pintada’’ prioriza: 1) Redução do impacto da ocupação humana dentro de áreas prioritárias para a conservação da espécie; 2) Redução do impacto ambiental nas áreas prioritárias para a conservação da espécie atingidas por grandes empreendimentos; 3) Fiscalização a fim de coibir a caça por retaliação e esportiva; 4) Programas de educação ambiental com foco em onça-pintada; 5) Estratégias de mitigação de conflitos; 6) Redução do número de espécimes retirados da natureza.
+
+Comprimento total: Até 2,70 m (máxima).
+
+Peso: Entre 35 kg e 158 kg.
+
+Dieta: Pequenos mamíferos, répteis e aves até grandes como antas, queixadas, veados, jacarés, sucuris.
+
+Número de filhotes: 1 a 4.
+
+Gestação: 90 a 111 dias.
+
+Longevidade: 15 anos (vida livre).
+
+Estrutura social: Solitária.
+
+Padrão de atividade: Diurno e noturno.
+
+Distribuição geográfica: Ocorre em quase todos os biomas brasileiros, com exceção do Pampa.
+
+Habitat: A onça-pintada pode habitar diferentes tipos de ambientes, de florestas tropicais a regiões semi-desérticas. A espécie parece evitar áreas com elevada altitude, apesar de haver registros de ocorrência de onça-pintada em áreas com 3.800 m. Além disso, a espécie evita áreas com atividade humana. Em áreas rurais, próximas a ambientes naturais da espécie, elas podem atacar rebanhos domésticos, ocasionando conflitos com proprietários rurais. Não há indícios de que onças-pintadas possam se adaptar a ambientes alterados pela ação humana, porém alguns animais foram fotografados, por meio de armadilha fotográfica, em reflorestamento de eucalipto.
+
+Descrição física: Sua pelagem varia do amarelo-claro ao castanho-ocreáceo e é caracterizada por manchas pretas em forma de rosetas de diferentes tamanhos. Estas rosetas são como a “impressão digital” do animal e servem para diferenciá-lo, pois cada indivíduo possui um padrão único de pelagem. Existe também a variação melânica da espécie, que são onças com uma coloração de fundo preto, mas que também possuem as rosetas.`
+                );
+            } else if (animalSelecionado === "oncaParda") {
+                exibirinformacaoAnimal(
+                    "Onça-parda",
+                    "../images/onca-parda.png",
+                    "."
+                );
+            } else if (animalSelecionado === "jaguarundi") {
+                exibirinformacaoAnimal(
+                    "Jaguarundi",
+                    "../images/jaguarundi.png",
+                    "."
+                );
+            } else if (animalSelecionado === "jaguatirica") {
+                exibirinformacaoAnimal(
+                    "Jaguatirica",
+                    "../images/jaguatirica.png",
+                    "."
+                );
+            } else if (animalSelecionado === "gatoMaracaja") {
+                exibirinformacaoAnimal(
+                    "Gato-maracajá",
+                    "../images/gato-maracaja.png",
+                    "."
+                );
+            } else if (animalSelecionado === "gatoMacambira") {
+                exibirinformacaoAnimal(
+                    "Gato-macambira",
+                    "../images/gato-macambira.png",
+                    "."
+                );
+            } else if (animalSelecionado === "gatoPequeno") {
+                exibirinformacaoAnimal(
+                    "Gato-do-mato-pequeno",
+                    "../images/gato-do-mato-pequeno.png",
+                    "."
+                );
+            } else if (animalSelecionado === "gatoGrande") {
+                exibirinformacaoAnimal(
+                    "Gato-do-mato-grande",
+                    "../images/gato-do-mato-grande.png",
+                    "."
+                );
+            } else if (animalSelecionado === "gatoPalheiro") {
+                exibirinformacaoAnimal(
+                    "Gato-palheiro",
+                    "../images/gato-palheiro.png",
+                    "."
+                );
             } else {
-                informacaoAnimal.style.display = 'none';
+                informacaoAnimal.style.display = "none";
             }
         });
 
         function exibirinformacaoAnimal(nome, imagem, descricao) {
-            const animalImg = document.getElementById('animalImg');
-            const descricaoAnimal = document.getElementById('descricaoAnimal');
+            const animalImg = document.getElementById("animalImg");
+            const descricaoAnimal = document.getElementById("descricaoAnimal");
 
             animalImg.src = imagem;
             animalImg.alt = `Imagem do ${nome}`;
             descricaoAnimal.textContent = descricao;
-            informacaoAnimal.style.display = 'block';
+            informacaoAnimal.style.display = "block";
         }
     </script>
 </body>
-
 
 </html>
